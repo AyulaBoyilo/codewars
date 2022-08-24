@@ -9,11 +9,15 @@
 // longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
 
 function longest(s1, s2) {
-    let result = [];
-    (s1 + s2).split('').forEach((letter) => {
-      if (!result.find(x => x == letter)){
-        result.push(letter);
-      }
-    })
-    return result.sort();
+  let result = [];
+  (s1 + s2).split('').forEach((letter) => {
+    if (!result.find(x => x == letter)){
+      result.push(letter);
+    }
+  })
+  return result.sort().join('');
 }
+
+// function longest(s1, s2) {
+//   return Array.from(new Set(s1 + s2)).sort().join('');
+// }
