@@ -70,6 +70,11 @@ function solution(number) {
     romanNum += romanSwitch(parseInt(number.toString().slice(-3, -2)), 1);
   }
 
+  if (number == 100) {
+    romanNum += "C";
+    return romanNum;
+  }
+
   // Tens
   if (number > 10) {
     romanNum += romanSwitch(parseInt(number.toString().slice(-2, -1)), 2);
